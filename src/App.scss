@@ -1,0 +1,77 @@
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;}
+
+#app {margin: 100px 50px;}
+
+.table-like {margin: 20px;}
+
+.header {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  margin-bottom: 15px;
+  font-weight: 500;}
+
+.header-row {
+  line-height: 36px;
+  height: 36px;
+  display: flex;
+  text-transform: capitalize;
+  flex-wrap: nowrap;}
+  
+.body-row {
+  height: 40px;}
+
+.cell {
+  border: 1px solid #ddd;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  padding: 0 15px;
+  &[data-col="id"]{
+    text-align: center;
+    min-width: 120px;}
+  &[data-col="followers"], &[data-col="stargazers_count"] {
+    text-align: center;
+    min-width: 110px;}
+  &[data-col="name"], &[data-col="login"] {
+    width: 30%;}
+  &[data-col="description"], &[data-col="avatar"]{
+    width: calc(70% - 230px);}}
+
+.header-cell {
+  height: 36px;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;}
+
+.row-cell {
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  img {
+    width: 40px;
+    height: 40px;}}
+
+.button {
+  margin: 10px auto;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-image: none;
+  border: 1px solid #357ebd;
+  padding: 7px 10px;
+  font-size: 14px;
+  line-height: 1.33;
+  border-radius: 6px;
+  color: #fff;
+  background-color: #428bca;
+}
